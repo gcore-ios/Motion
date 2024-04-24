@@ -384,7 +384,7 @@ internal extension MotionContext {
       viewToAlphas[view] = 1
       
     } else {
-      viewToAlphas[view] = view.alpha
+      viewToAlphas[view] = view.alpha > 0 ? view.alpha : 1.0
       view.alpha = 0
     }
   }
